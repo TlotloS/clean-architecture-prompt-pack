@@ -1,0 +1,181 @@
+{
+  "name": "cursor-clean-architecture-pack",
+  "displayName": "Clean Architecture + DDD + CQRS Prompt Pack",
+  "description": "A comprehensive prompt pack for scaffolding .NET projects following Clean Architecture, DDD, and CQRS patterns",
+  "version": "1.0.0",
+  "publisher": "clean-architecture-pack",
+  "engines": {
+    "cursor": "^1.0.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "clean-architecture",
+    "ddd",
+    "cqrs",
+    "dotnet",
+    "csharp",
+    "scaffolding",
+    "prompts"
+  ],
+  "activationEvents": [
+    "onCommand:cleanArchitecture.createProject",
+    "onCommand:cleanArchitecture.createEntity",
+    "onCommand:cleanArchitecture.createDomainLayer",
+    "onCommand:cleanArchitecture.createApplicationLayer",
+    "onCommand:cleanArchitecture.createInfrastructureLayer",
+    "onCommand:cleanArchitecture.createApiLayer",
+    "onCommand:cleanArchitecture.createTests",
+    "onCommand:cleanArchitecture.createMigration",
+    "onCommand:cleanArchitecture.createDocumentation",
+    "onCommand:cleanArchitecture.createCrossCuttingConcerns"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cleanArchitecture.createProject",
+        "title": "🏗️ Create Clean Architecture Project",
+        "category": "Clean Architecture",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "cleanArchitecture.createEntity",
+        "title": "🎯 Create Complete Entity",
+        "category": "Clean Architecture",
+        "icon": "$(symbol-class)"
+      },
+      {
+        "command": "cleanArchitecture.createDomainLayer",
+        "title": "🏛️ Create Domain Layer",
+        "category": "Clean Architecture",
+        "icon": "$(symbol-namespace)"
+      },
+      {
+        "command": "cleanArchitecture.createApplicationLayer",
+        "title": "📝 Create Application Layer",
+        "category": "Clean Architecture",
+        "icon": "$(symbol-method)"
+      },
+      {
+        "command": "cleanArchitecture.createInfrastructureLayer",
+        "title": "🗄️ Create Infrastructure Layer",
+        "category": "Clean Architecture",
+        "icon": "$(database)"
+      },
+      {
+        "command": "cleanArchitecture.createApiLayer",
+        "title": "🌐 Create API Layer",
+        "category": "Clean Architecture",
+        "icon": "$(globe)"
+      },
+      {
+        "command": "cleanArchitecture.createTests",
+        "title": "🧪 Create Integration Tests",
+        "category": "Clean Architecture",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "cleanArchitecture.createMigration",
+        "title": "🔄 Create Database Migration",
+        "category": "Clean Architecture",
+        "icon": "$(arrow-sync)"
+      },
+      {
+        "command": "cleanArchitecture.createDocumentation",
+        "title": "📚 Create Project Documentation",
+        "category": "Clean Architecture",
+        "icon": "$(book)"
+      },
+      {
+        "command": "cleanArchitecture.createCrossCuttingConcerns",
+        "title": "🔧 Create Cross-Cutting Concerns",
+        "category": "Clean Architecture",
+        "icon": "$(gear)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "cleanArchitecture.createProject",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createEntity",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createDomainLayer",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createApplicationLayer",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createInfrastructureLayer",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createApiLayer",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createTests",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createMigration",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createDocumentation",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "cleanArchitecture.createCrossCuttingConcerns",
+          "when": "workspaceFolderCount > 0"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Clean Architecture Pack",
+      "properties": {
+        "cleanArchitecture.defaultProjectName": {
+          "type": "string",
+          "default": "MyProject",
+          "description": "Default project name for new projects"
+        },
+        "cleanArchitecture.defaultEntityName": {
+          "type": "string",
+          "default": "Product",
+          "description": "Default entity name for new entities"
+        },
+        "cleanArchitecture.autoInsertPrompt": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically insert prompt into active editor"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/cursor-clean-architecture-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/cursor-clean-architecture-pack/issues"
+  },
+  "homepage": "https://github.com/your-username/cursor-clean-architecture-pack#readme",
+  "license": "MIT"
+}
